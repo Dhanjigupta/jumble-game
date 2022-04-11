@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 500px;
+            height:400px;
+            background-color: lightgray;
+            border-radius:10px;
+        }
+        body{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .padd{
+            padding: 30px;
+        }
+        .score{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 38px;
+            padding:10px 0px;
+        }
+        .jumbled{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: 'Segoe UI';
+        }
+        .user-input{
+            display: flex;
+            padding:20px 0px;
+            flex-direction: column;
+        }
+        .inp{
+            font-size: 20px;
+            border:1px solid gray;
+            height: 35px;
+            border-radius: 10px;
+            text-indent: 20px;
+            outline: none;
+            padding:10px 0px;
+        }
+        .btn{
+            margin-top: 20px;
+            padding: 10px 0px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #239cf3;
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+
+ <div class="container">
+   <div class="padd">
+    <div class="score">
+      <p id="score">0</p>
+    </div>
+    <div class="jumbled">
+      <p id="j-word"></p>
+    </div>
+    <div class="user-input">
+      <input type="text" class="inp" id="inp" placeholder="Enter Correct Word"/>
+      <button class="btn" onclick="checkAnswer()">Submit</button>
+    </div>
+   </div>     
+ </div>   
+<script src="jumble.js"></script>    
+</body>
+</html>
